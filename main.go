@@ -53,6 +53,7 @@ func main() {
 func getInput(i, j *int) {
 	print("\nточка (например 1,2) > ")
 	fmt.Scanf("%d,%d", i, j)
+	print("\n")
 }
 
 // start забиваем поле точками
@@ -90,11 +91,7 @@ func show() {
 		fmt.Printf("%d   ", i) // нумерация X
 
 		for j := 0; j < fieldsNum; j++ {
-			if mines[i][j] {
-				print("o")
-			} else {
-				print(field[i][j])
-			}
+			print(field[i][j])
 			print(" ")
 		}
 		print("\n")
